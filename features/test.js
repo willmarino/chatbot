@@ -7,7 +7,7 @@ module.exports = function(controller) {
       await bot.reply(message, 'me reply is working.');
   });
 
-  controller.on('welcome_back', async(bot, message) => {
+  controller.on('welcome_back,hello', async(bot, message) => {
     // do somethign using bot and message like...
     await bot.reply(message, "howdy, partner")
     await bot.reply(message, {
