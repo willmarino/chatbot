@@ -14,16 +14,16 @@ module.exports = function(controller) {
       text: 'Here are some quick replies',
       quick_replies: [
           {
-              title: 'Foo',
-              payload: 'foo',
+              title: 'Job History',
+              payload: 'job history',
           },
           {
-              title: 'Bar',
-              payload: 'bar',
+              title: 'Github',
+              payload: 'github',
           },
           {
-            title: 'Me',
-            payload: 'me',
+            title: 'LinkedIn',
+            payload: 'linkedin',
         }
       ]
     });;
