@@ -386,3 +386,25 @@ a.button:hover {
 .toggle-display {
   display: none;
 }
+
+#chat-button {
+  background: linear-gradient(to bottom, #c68eea, #741eb5);
+  padding: 30px;
+  color: white;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-size: 40px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 4px 4px 5px #333333;
+  z-index: 10;
+}
+
+#chat-button:hover {
+  background: linear-gradient(to bottom, #bd7ce4, #741eb5);
+  transition: .5s ease-in;
+
+}
