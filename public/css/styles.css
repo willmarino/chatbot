@@ -13,9 +13,13 @@ html {
 }
 
 .wrapper {
-  position: relative;
-  max-width: 1000px;
-  margin: 0 auto;
+    position: fixed;
+    max-width: 475px;
+    z-index: 9;
+    right: 175px;
+    bottom: 30px;
+    box-shadow: 4px 4px 5px #464545;
+    width: 100%;
 }
 .wrapper:after {
   content: "";
@@ -130,6 +134,7 @@ a.button:hover {
   display: flex;
   flex-direction: column;
   font-family: "helvetica", sans-serif;
+  border-radius: 5px;
 }
 #message_window .disconnected {
   background: #FFFFCC;
@@ -391,20 +396,25 @@ a.button:hover {
   background: linear-gradient(to bottom, #c68eea, #741eb5);
   padding: 30px;
   color: white;
-  position: absolute;
+  position: fixed;
   bottom: 30px;
   right: 30px;
   font-size: 40px;
-  border-radius: 50%;
+  border-radius: 5px;
   border: none;
   outline: none;
   cursor: pointer;
-  box-shadow: 4px 4px 5px #333333;
+  box-shadow: 4px 4px 5px #3e3c3c;
   z-index: 10;
 }
 
 #chat-button:hover {
-  background: linear-gradient(to bottom, #bd7ce4, #741eb5);
-  transition: .5s ease-in;
+  background: linear-gradient(to bottom, #bd7ce4, #62199a);
+  transition: .5s ease-out;
 
+}
+
+#message_list {
+    max-height: 500px;
+    overflow: auto;
 }
