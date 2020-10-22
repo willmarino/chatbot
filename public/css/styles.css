@@ -345,10 +345,12 @@ a.button:hover {
 /* STYLING ADDED FOR INTERACTIVE HELP BOX */
 
 
-.help-box-container{
+#help-box-container{
   position: absolute;
-  width: 15vw;
-  height: 20vh;
+  width: 20vw;
+  height: 25vh;
+  max-width: 300px;
+  max-height: 200px;
   right: 2vw;
   top: 1vh;
 
@@ -356,13 +358,13 @@ a.button:hover {
   padding: 10px;
   border: 1px solid black;
   border-radius: 5px;
-  box-shadow: 0 0 3px 1px #606060;
+  box-shadow: 0 0 3px 1px #A9A9A9;
 
   z-index: 5;
   background: white;
 }
 
-.help-box-container p{
+#help-box-container p{
   user-select: none;
 }
 
@@ -374,6 +376,57 @@ a.button:hover {
   justify-content: space-around;
   align-items: center;
 }
+
+.message-box-buttons{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.icon-addons{
+  user-select: none;
+}
+
+.icon-addons:hover{
+  cursor: pointer;
+}
+
+.help-box-message{
+  height: 80px;
+  text-align: center;
+  font-family: "helvetica", sans-serif;
+  font-size: 14px;
+}
+
+.hidden-now{
+  visibility: hidden;
+}
+
+.visible-now{
+  visibility: visible;
+}
+
+#help-button{
+  position: absolute;
+  right: 2vw;
+  top: 1vh;
+  user-select: none;
+}
+
+#help-button:hover{
+  cursor: pointer;
+}
+
+.message-box-header{
+  width: 100%;
+}
+
+#close-help-box-button{
+  margin-left: 85%;
+}
+
+
 
 
 /* STYLING ADDED FOR INTERACTIVE HELP BOX */
