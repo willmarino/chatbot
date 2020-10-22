@@ -32,6 +32,9 @@ module.exports = function(controller) {
     const jobRegex = /job/gmi;
     const workRegex = /work/gmi;
 
+    const projectsRegex = /projects/gmi;
+    const projectRegex = /project/gmi;
+
 
     controller.hears([new RegExp(academicRegex)], ['message','direct_message'], async function(bot, message) {
         await bot.reply(message,{ text: 'Here you will find info about academic history.' });
@@ -106,6 +109,32 @@ module.exports = function(controller) {
     });
     controller.hears(['Interests'], ['message','direct_message'], async function(bot, message) {
         await bot.reply(message, { text: 'Here you can find info about my dream job: where I would like to work and what I would prefer to do.'});
+    });
+
+    controller.hears([new RegExp(projectsRegex)], ['message','direct_message'], async function(bot, message) {
+        await bot.reply(message,{
+            text: 'Here are some of my projects.',
+            quick_replies: [
+                {
+                    title: 'Project A',
+                    payload: 'Project A'
+                },
+                {
+                    title: 'Project B',
+                    payload: 'Project B'
+                },
+                {
+                    title: 'Project C',
+                    payload: 'Project C'
+                }
+            ]
+        });
+    });
+
+    controller.hears([new RegExp(projectRegex)], ['message','direct_message'], async function(bot, message) {
+        await bot.reply(message,{
+            text: 'Here is some inforamtion about this project.',
+        });
     });
 
 }
