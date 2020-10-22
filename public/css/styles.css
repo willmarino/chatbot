@@ -9,7 +9,7 @@ html {
   padding: 0;
   font-size: 18px;
   background-color: #494c4c;
-  font-family: "helvetica", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .wrapper {
@@ -133,7 +133,7 @@ a.button:hover {
   /*margin: 2rem auto;*/
   display: flex;
   flex-direction: column;
-  font-family: "helvetica", sans-serif;
+  font-family: "Roboto", sans-serif;
   border-radius: 10px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -377,17 +377,17 @@ a.button:hover {
   height: 25vh;
   max-width: 300px;
   max-height: 200px;
-  right: 2vw;
-  top: 1vh;
+  right: 30px;
+  top: 30px;
 
   box-sizing: border-box;
   padding: 10px;
   border: 1px solid black;
   border-radius: 5px;
-  box-shadow: 0 0 3px 1px #A9A9A9;
+  box-shadow: 5px 5px 5px #403d3d;
+  background: #c5c1c1;
 
   z-index: 5;
-  background: white;
 }
 
 #help-box-container p{
@@ -421,7 +421,7 @@ a.button:hover {
 .help-box-message{
   height: 80px;
   text-align: center;
-  font-family: "helvetica", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
 }
 
@@ -435,9 +435,11 @@ a.button:hover {
 
 #help-button{
   position: absolute;
-  right: 2vw;
-  top: 1vh;
+  right: 50px;
+  top: 30px;
   user-select: none;
+  color: white;
+  font-size: 40px;
 }
 
 #help-button:hover{
@@ -449,8 +451,10 @@ a.button:hover {
 }
 
 #close-help-box-button{
-  margin-left: 85%;
+  margin-left: 90%;
 }
+
+
 
 
 

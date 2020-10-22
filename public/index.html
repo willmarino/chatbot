@@ -6,16 +6,19 @@
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/css/styles.css" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body >
       <div>
-        <i id='help-button' class="material-icons">description</i>
+        <div id='help-button-container'>
+          <i id='help-button' class="fas fa-question"></i>
+        </div>
       </div>
       <div id="help-box-container" class="hidden-now">
         <div class='message-box'>
           <div class='message-box-header'>
-            <i id='close-help-box-button' class="material-icons icon-addons">cancel</i>
+            <i id='close-help-box-button' class="far fa-times-circle icon-addons"></i>
           </div>
           <p class='help-box-message'>Welcome to my chatbot, need some help?</p>
           <div class='message-box-buttons'>

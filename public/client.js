@@ -389,7 +389,6 @@ var Botkit = {
         });
 
         that.on('message', function (message) {
-
             console.log('RECEIVED MESSAGE', message);
             that.renderMessage(message);
 
@@ -399,6 +398,8 @@ var Botkit = {
             if (message.goto_link) {
                 window.location = message.goto_link;
             }
+            let messageList = document.getElementById('message_list');
+            messageList.childNodes[messageList.childNodes.length - 1].scrollIntoView();
         });
 
 
@@ -425,10 +426,12 @@ var Botkit = {
                         list.appendChild(li);
                         elements.push(li);
 
+
                     })(message.quick_replies[r]);
                 }
 
                 that.replies.appendChild(list);
+
 
                 // uncomment this code if you want your quick replies to scroll horizontally instead of stacking
                 // var width = 0;
