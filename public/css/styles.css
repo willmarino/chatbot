@@ -373,8 +373,8 @@ a.button:hover {
 
 #help-box-container{
   position: absolute;
-  width: 20vw;
-  height: 25vh;
+  width: 300px;
+  height: 200px;
   max-width: 300px;
   max-height: 200px;
   right: 30px;
