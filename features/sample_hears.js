@@ -37,7 +37,20 @@ module.exports = function(controller) {
         await bot.reply(message,{ text: 'Here you will find info about academic history.' });
     });
     controller.hears([new RegExp(educationRegex)], ['message','direct_message'], async function(bot, message) {
-        await bot.reply(message,{ text: 'Here you will find info about academic history.' });
+        // await bot.reply(message,{ text: 'Here you find info about academic history.' });
+        await bot.reply(message, {
+            text: 'Which part of my academic history would you like to learn about?',
+            quick_replies: [
+                {
+                    title: 'Bootcamp',
+                    payload: 'bootcamp',
+                },
+                {
+                    title: 'University',
+                    payload: 'university',
+                }
+            ]
+        });
     });
 
     controller.hears([new RegExp(languagesRegex)], ['message','direct_message'], async function(bot, message) {
