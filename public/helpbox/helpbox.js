@@ -1,6 +1,6 @@
 // code for help button which is clicked to display help box
 
-const helpButton = document.getElementById('help-button');
+const helpButton = document.getElementById('help-button-container');
 const closeButton = document.getElementById('close-help-box-button');
 
 const messageBox = document.getElementById('help-box-container');
