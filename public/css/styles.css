@@ -9,7 +9,7 @@ html {
   padding: 0;
   font-size: 18px;
   background-color: #494c4c;
-  font-family: "helvetica", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .wrapper {
@@ -133,7 +133,7 @@ a.button:hover {
   /*margin: 2rem auto;*/
   display: flex;
   flex-direction: column;
-  font-family: "helvetica", sans-serif;
+  font-family: 'Roboto', sans-serif;
   border-radius: 10px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -334,6 +334,8 @@ a.button:hover {
   animation: 1s blink infinite 0.9999s;
 }
 
+
+
 @keyframes blink {
   50% {
     opacity: 1;
@@ -421,7 +423,7 @@ a.button:hover {
 .help-box-message{
   height: 80px;
   text-align: center;
-  font-family: "helvetica", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
 }
 
@@ -495,6 +497,24 @@ a.button:hover {
     overflow: auto;
 }
 
+
+#message_list::-webkit-scrollbar{
+    width: 10px;
+    background: rgb(127 124 127);
+    margin-top: 75px;
+}
+
+#message_list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.329);
+  border-radius: 10px;
+}
+
+#message_list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.178);
+}
+
+/* Logo Styles */
+
 .logo-box {
   display: flex;
   align-items: center;
@@ -504,7 +524,6 @@ a.button:hover {
 
 .chatbot-logo {
   padding: 50px;
-  border: 5px solid #62199a;
   border-radius: 10px;
 
   font-family: 'Press Start 2P';
@@ -555,19 +574,4 @@ a.button:hover {
     100%{
         background-color: #DF0800;
     }
-}
-
-#message_list::-webkit-scrollbar{
-    width: 10px;
-    background: rgb(127 124 127);
-    margin-top: 75px;
-}
-
-#message_list::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.329);
-  border-radius: 10px;
-}
-
-#message_list::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.178);
 }
