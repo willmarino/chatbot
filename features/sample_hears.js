@@ -34,23 +34,23 @@ module.exports = function(controller) {
 
 
     controller.hears([new RegExp(academicRegex)], ['message','direct_message'], async function(bot, message) {
-        await bot.reply(message,{ text: 'Here you find info about academic history.' });
+        await bot.reply(message,{ text: 'Here you will find info about academic history.' });
     });
     controller.hears([new RegExp(educationRegex)], ['message','direct_message'], async function(bot, message) {
-        await bot.reply(message,{ text: 'Here you find info about academic history.' });
+        await bot.reply(message,{ text: 'Here you will find info about academic history.' });
     });
 
     controller.hears([new RegExp(languagesRegex)], ['message','direct_message'], async function(bot, message) {
-        await bot.reply(message,{ text: 'Here you find info about the languages I am proficient in.' });
+        await bot.reply(message,{ text: 'Here you will find info about the languages I am proficient in.' });
     });
     controller.hears([new RegExp(techRegex)], ['message','direct_message'], async function(bot, message) {
-        await bot.reply(message,{ text: 'Here you find info about the languages I am proficient in.' });
+        await bot.reply(message,{ text: 'Here you will find info about the languages I am proficient in.' });
     });
     controller.hears([new RegExp(stackRegex)], ['message','direct_message'], async function(bot, message) {
-        await bot.reply(message,{ text: 'Here you find info about the languages I am proficient in.' });
+        await bot.reply(message,{ text: 'Here you will find info about the languages I am proficient in.' });
     });
     controller.hears([new RegExp(skillsRegex)], ['message','direct_message'], async function(bot, message) {
-        await bot.reply(message,{ text: 'Here you find info about the languages I am proficient in.' });
+        await bot.reply(message,{ text: 'Here you will find info about the languages I am proficient in.' });
     });
 
     controller.hears([new RegExp(contactRegex)], ['message','direct_message'], async function(bot, message) {
@@ -58,9 +58,41 @@ module.exports = function(controller) {
     });
 
     controller.hears([new RegExp(jobRegex)], ['message','direct_message'], async function(bot, message) {
-        await bot.reply(message,{ text: 'Here you will find my job history.' });
+        await bot.reply(message,{ 
+            text: 'Here you will find my job history.',
+            quick_replies: [
+                {
+                    title: 'Previous Gigs',
+                    payload: 'Previous Gigs'
+                },
+                {
+                    title: 'Interests',
+                    payload: 'Interests'
+                }
+            ]
+        });
     });
     controller.hears([new RegExp(workRegex)], ['message','direct_message'], async function(bot, message) {
-        await bot.reply(message,{ text: 'Here you will find my job history.' });
+        await bot.reply(message,{
+            text: 'Here you will find my job history.',
+            quick_replies: [
+                {
+                    title: 'Previous Gigs',
+                    payload: 'Previous Gigs'
+                },
+                {
+                    title: 'Interests',
+                    payload: 'Interests'
+                }
+            ]
+        });
     });
+
+    controller.hears(['Previous Gigs'], ['message','direct_message'], async function(bot, message) {
+        await bot.reply(message, { text: 'Here you will find a list of my previous gigs and responsibilities there.'});
+    });
+    controller.hears(['Interests'], ['message','direct_message'], async function(bot, message) {
+        await bot.reply(message, { text: 'Here you can find info about my dream job: where I would like to work and what I would prefer to do.'});
+    });
+
 }
