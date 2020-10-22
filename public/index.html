@@ -4,15 +4,22 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
         <script src="https://cdn.rawgit.com/showdownjs/showdown/1.7.4/dist/showdown.min.js"></script>
         <link rel="stylesheet" href="/css/styles.css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body >
-      <div class="help-box-container">
+      <div>
+        <i id='help-button' class="material-icons">description</i>
+      </div>
+      <div id="help-box-container" class="hidden-now">
         <div class='message-box'>
-          <p class='message'>I am the first message</p>
+          <div class='message-box-header'>
+            <i id='close-help-box-button' class="material-icons icon-addons">cancel</i>
+          </div>
+          <p class='help-box-message'>Welcome to my chatbot, need some help?</p>
           <div class='message-box-buttons'>
-            <p class='message-box-button-decr'>decrement</p>
-            <p class='message-box-button-incr'>increment</p>
+            <i id='prev-message-button' class="material-icons icon-addons">arrow_back</i>
+            <i id='next-message-button' class="material-icons icon-addons">arrow_forward</i>
           </div>
         </div>
       </div>
