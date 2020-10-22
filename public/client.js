@@ -242,6 +242,7 @@ var Botkit = {
         if (!that.next_line) {
             that.next_line = document.createElement('div');
             that.message_list.appendChild(that.next_line);
+            that.next_line.scrollIntoView();
         }
         if (message.text) {
             message.html = converter.makeHtml(message.text);
