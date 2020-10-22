@@ -497,15 +497,15 @@ a.button:hover {
 
 .logo-box {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  cursor: default;
 }
 
 .chatbot-logo {
-  padding: 50px;
-  border: 5px solid #62199a;
-  border-radius: 10px;
+  margin: 0 0 10px 0;
 
   font-family: 'Press Start 2P';
   font-size: 50px;
@@ -570,4 +570,42 @@ a.button:hover {
 
 #message_list::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.178);
+}
+
+/* links to portfolio sites */
+
+.portfolio-links {
+  position: fixed;
+  left: 20px;
+  bottom: 35px;
+  cursor: default;
+}
+
+.portfolio-links a {
+  text-decoration: none;
+  border: 1px solid #cabff5;
+  color: #cabff5;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.portfolio-links a:hover {
+  border: 1px solid #131313;
+  background: #131313;
+  color: #FFFFCC;
+  transition: 0.3s linear;
+    cursor: pointer;
+}
+
+.hunter-link {
+  padding: 4px 8px;
+}
+
+.shree-link {
+  padding: 4px 8px;
+}
+
+.will-link {
+  padding: 4px 6px;
 }
