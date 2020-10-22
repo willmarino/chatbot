@@ -493,8 +493,68 @@ a.button:hover {
 #message_list {
     max-height: 500px;
     overflow: auto;
-    padding: 20px 10px;
-    
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.chatbot-logo {
+  padding: 50px;
+  border: 5px solid #62199a;
+  border-radius: 10px;
+
+  font-family: 'Press Start 2P';
+  font-size: 50px;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation-name: animatingbackground;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animatingbackground{
+    0%{
+        background-color: #DF0800;
+    }
+
+    13%{
+        background-color: #F27242;
+    }
+
+    25%{
+        background-color: #FEBF2D;
+    }
+
+    38%{
+        background-color: #D1DF00;
+    }
+
+    50%{
+        background-color: #8DCD59;
+    }
+
+    63%{
+        background-color: #59B5E4;
+    }
+
+    75%{
+        background-color: #B36DDD;
+    }
+
+    88%{
+        background-color: #ED5D92;
+    }
+
+    100%{
+        background-color: #DF0800;
+    }
 }
 
 #message_list::-webkit-scrollbar{
