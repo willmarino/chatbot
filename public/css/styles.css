@@ -8,14 +8,18 @@ html {
   margin: 0;
   padding: 0;
   font-size: 18px;
-  background-color: #FFF;
+  background-color: #494c4c;
   font-family: "helvetica", sans-serif;
 }
 
 .wrapper {
-  position: relative;
-  max-width: 1000px;
-  margin: 0 auto;
+    position: fixed;
+    max-width: 475px;
+    z-index: 9;
+    right: 175px;
+    bottom: 30px;
+    box-shadow: 4px 4px 5px #464545;
+    width: 100%;
 }
 .wrapper:after {
   content: "";
@@ -121,9 +125,7 @@ a.button:hover {
 
 /* chat client */
 #message_window {
-  background: #FFFFFF;
-  border-left: 1px solid #CCC;
-  border-right: 1px solid #CCC;
+  background: #646666;
   /*height: 500px;
   width: 320px;*/
   height: 100%;
@@ -132,6 +134,7 @@ a.button:hover {
   display: flex;
   flex-direction: column;
   font-family: "helvetica", sans-serif;
+  border-radius: 5px;
 }
 #message_window .disconnected {
   background: #FFFFCC;
@@ -158,11 +161,11 @@ a.button:hover {
   border-bottom: 1px solid #CCC;
   font-size: 14px;
   padding: 0.25rem;
-  color: #666;
+  color: white;
 }
 #message_window .powered_by a {
   text-decoration: none;
-  color: #666;
+  color: white;
 }
 #message_window .powered_by img {
   position: relative;
@@ -381,3 +384,37 @@ a.button:hover {
 
 
 /*# sourceMappingURL=styles.css.map */
+
+
+/* STYLING FOR CHAT BUTTON */
+
+.toggle-display {
+  display: none;
+}
+
+#chat-button {
+  background: linear-gradient(to bottom, #c68eea, #741eb5);
+  padding: 30px;
+  color: white;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 40px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 4px 4px 5px #3e3c3c;
+  z-index: 10;
+}
+
+#chat-button:hover {
+  background: linear-gradient(to bottom, #bd7ce4, #62199a);
+  transition: .5s ease-out;
+
+}
+
+#message_list {
+    max-height: 500px;
+    overflow: auto;
+}
