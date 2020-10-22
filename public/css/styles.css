@@ -134,7 +134,9 @@ a.button:hover {
   display: flex;
   flex-direction: column;
   font-family: "helvetica", sans-serif;
-  border-radius: 5px;
+  border-radius: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 #message_window .disconnected {
   background: #FFFFCC;
@@ -158,10 +160,12 @@ a.button:hover {
 #message_window .powered_by {
   flex-shrink: 0;
   text-align: center;
-  border-bottom: 1px solid #CCC;
-  font-size: 14px;
-  padding: 0.25rem;
+  font-size: 16px;
+  padding: 10px;
   color: white;
+  background: #741eb5;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 #message_window .powered_by a {
   text-decoration: none;
@@ -181,37 +185,53 @@ a.button:hover {
   margin: 0.25rem;
   clear: both;
 }
-#message_window footer {
-  border-top: 1px solid #CCC;
-  padding: 0.25rem;
-}
+/* #message_window footer {
+  padding: 20px 0px 0px 0px;
+} */
 #message_window footer input[type=text] {
   flex-grow: 1;
-  font-size: 1.25rem;
+  font-size: 20px;
   outline: none;
   border: none;
+  border-bottom-left-radius: 10px;
+  padding: 10px;
+  color: white;
+  background: #797979;
+
 }
+
+#message_window footer input[type=text]::placeholder {
+  color: #c5c2c2;
+}
+
 #message_window footer button {
   width: 50px;
   background: none;
   border: 0;
   cursor: pointer;
-  color: blue;
+  color: #e4eaea;
   font-weight: bold;
+  border-bottom-right-radius: 10px;
+  background: #5a5757;
 }
+
+#message_window footer button:hover {
+  background: #3e3d3d;
+  transition: .2s ease-out;
+}
+
 #message_window form {
   display: flex;
   margin: 0;
-  padding: 0.25rem;
 }
 #message_window #message_template {
   display: none;
 }
 #message_window .message {
-  font-size: 14px;
+  font-size: 16px;
   padding: 0.5rem;
-  background: #F0F0F0;
-  color: #333;
+  background: #0cad99;
+  color: white;
   border-radius: 5px;
   width: auto;
   display: inline-block;
@@ -250,7 +270,7 @@ a.button:hover {
 }
 #message_window .message.outgoing {
   float: right;
-  background: #a795ef;
+  background: #b460ea;
   color: white;
 }
 #message_window #message_replies {
@@ -273,16 +293,19 @@ a.button:hover {
 #message_window #message_replies a {
   text-decoration: none;
   display: block;
-  border: 1px solid #a795ef;
-  color: #a795ef;
+  border: 1px solid #cabff5;
+  color: #dad1fd;
   border-radius: 16px;
-  padding: 0.25rem 1rem;
+  padding: 10px 20px;
   font-size: 14px;
   cursor: pointer;
+  margin: 10px 0;
 }
 #message_window #message_replies a:hover {
-  background: #a795ef;
+  background: #992ae0;
   color: #FFF;
+  transition: .2s;
+  border: 1px solid #992ae0;
 }
 
 /* typing indicator CSS based on code by Joseph Fusco -> https://codepen.io/fusco/pen/XbpaYv */
@@ -470,4 +493,21 @@ a.button:hover {
 #message_list {
     max-height: 500px;
     overflow: auto;
+    padding: 20px 10px;
+    
+}
+
+#message_list::-webkit-scrollbar{
+    width: 10px;
+    background: rgb(127 124 127);
+    margin-top: 75px;
+}
+
+#message_list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.329);
+  border-radius: 10px;
+}
+
+#message_list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.178);
 }
